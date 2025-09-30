@@ -1,0 +1,61 @@
+[package]
+name = "glin-client"
+version = "0.1.0"
+edition = "2021"
+authors = ["GLIN AI Team"]
+description = "Reference CLI client for GLIN federated learning marketplace"
+license = "Apache-2.0"
+repository = "https://github.com/glin-ai/glin-client"
+keywords = ["federated-learning", "distributed-computing", "machine-learning", "gpu"]
+categories = ["command-line-utilities", "science"]
+
+[dependencies]
+# CLI
+clap = { version = "4", features = ["derive", "env"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json", "rustls-tls", "multipart"], default-features = false }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+anyhow = "1"
+thiserror = "1"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Authentication
+jsonwebtoken = "9"
+
+# Configuration
+toml = "0.8"
+directories = "5"
+
+# UUIDs
+uuid = { version = "1", features = ["serde", "v4"] }
+
+# Date/Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Process management
+sysinfo = "0.30"
+
+# Validation
+validator = { version = "0.16", features = ["derive"] }
+
+[dev-dependencies]
+mockito = "1"
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true
