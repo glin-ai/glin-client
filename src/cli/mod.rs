@@ -6,7 +6,7 @@ pub mod benchmark;
 use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
-#[command(name = "glin-client")]
+#[command(name = "glin-provider")]
 #[command(about = "GLIN Federated Learning Provider CLI", long_about = None)]
 #[command(version)]
 pub struct Cli {

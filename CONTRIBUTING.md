@@ -1,6 +1,6 @@
-# Contributing to GLIN Client
+# Contributing to GLIN Provider
 
-Thank you for your interest in contributing to GLIN Client! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to GLIN Provider! This document provides guidelines and instructions for contributing.
 
 ## 📋 Table of Contents
 
@@ -36,7 +36,7 @@ Before you begin, ensure you have:
 
 ### Finding Issues to Work On
 
-- Check the [issue tracker](https://github.com/glin-ai/glin-client/issues)
+- Check the [issue tracker](https://github.com/glin-ai/glin-provider/issues)
 - Look for issues labeled `good first issue` or `help wanted`
 - Comment on an issue to let others know you're working on it
 - Ask questions if anything is unclear
@@ -45,19 +45,19 @@ Before you begin, ensure you have:
 
 1. **Fork the repository:**
 
-Visit https://github.com/glin-ai/glin-client and click "Fork"
+Visit https://github.com/glin-ai/glin-provider and click "Fork"
 
 2. **Clone your fork:**
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/glin-client.git
-cd glin-client
+git clone https://github.com/YOUR_USERNAME/glin-provider.git
+cd glin-provider
 ```
 
 3. **Add the upstream remote:**
 
 ```bash
-git remote add upstream https://github.com/glin-ai/glin-client.git
+git remote add upstream https://github.com/glin-ai/glin-provider.git
 ```
 
 4. **Install dependencies:**
@@ -310,7 +310,7 @@ def train_model(model, dataset, epochs=10):
 ## 🏗️ Project Structure
 
 ```
-glin-client/
+glin-provider/
 ├── src/
 │   ├── api/          # Backend API client
 │   ├── cli/          # CLI commands
@@ -357,7 +357,7 @@ Use the feature request template in GitHub Issues.
 ### Getting Help
 
 - **Discord**: https://discord.gg/glin
-- **GitHub Discussions**: https://github.com/glin-ai/glin-client/discussions
+- **GitHub Discussions**: https://github.com/glin-ai/glin-provider/discussions
 - **Email**: dev@glin.ai
 
 ### Stay Updated
@@ -368,11 +368,11 @@ Use the feature request template in GitHub Issues.
 
 ## 📄 License
 
-By contributing to GLIN Client, you agree that your contributions will be licensed under the Apache 2.0 License.
+By contributing to GLIN Provider, you agree that your contributions will be licensed under the Apache 2.0 License.
 
 ## 🙏 Thank You!
 
-Your contributions make GLIN Client better for everyone. We appreciate your time and effort!
+Your contributions make GLIN Provider better for everyone. We appreciate your time and effort!
 
 ---
 

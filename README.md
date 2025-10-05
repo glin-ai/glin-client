@@ -1,4 +1,4 @@
-# GLIN Client
+# GLIN Provider
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
@@ -6,7 +6,9 @@
 
 **Official reference implementation of the GLIN federated learning provider client.**
 
-GLIN Client is a CLI tool that allows GPU providers to participate in the GLIN federated learning marketplace. It handles provider registration, hardware detection, task polling, training execution, and gradient submission.
+GLIN Provider is a CLI tool that allows GPU providers to participate in the GLIN federated learning marketplace. It handles provider registration, hardware detection, task polling, training execution, and gradient submission.
+
+**[📚 Documentation →](https://docs.glin.ai/federated-learning/getting-started/train-model)** | **[🌐 Network Docs →](https://docs.glin.ai/network/intro)**
 
 ## 🚀 Quick Start
 
@@ -14,8 +16,8 @@ GLIN Client is a CLI tool that allows GPU providers to participate in the GLIN f
 
 ```bash
 # From source
-git clone https://github.com/glin-ai/glin-client
-cd glin-client
+git clone https://github.com/glin-ai/glin-provider
+cd glin-provider
 cargo install --path .
 ```
 
@@ -23,7 +25,7 @@ cargo install --path .
 
 ```bash
 # Register your GPU with the network
-glin-client register \
+glin-provider register \
   --name "My GPU" \
   --wallet-address "0x..." \
   --backend-url "https://api.glin.ai"
@@ -33,7 +35,7 @@ glin-client register \
 
 ```bash
 # Start accepting federated learning tasks
-glin-client start
+glin-provider start
 ```
 
 ## 📋 Prerequisites
@@ -62,35 +64,35 @@ glin-client start
 Register your provider with the GLIN network.
 
 ```bash
-glin-client register --name "My GPU" --wallet-address "0x..."
+glin-provider register --name "My GPU" --wallet-address "0x..."
 ```
 
 ### `start`
 Start the worker daemon to accept tasks.
 
 ```bash
-glin-client start
+glin-provider start
 ```
 
 ### `status`
 Check your provider status and active tasks.
 
 ```bash
-glin-client status
+glin-provider status
 ```
 
 ### `benchmark`
 Run GPU benchmark tests.
 
 ```bash
-glin-client benchmark
+glin-provider benchmark
 ```
 
 ### `logs`
 View worker logs.
 
 ```bash
-glin-client logs --tail 100
+glin-provider logs --tail 100
 ```
 
 ## 💡 Usage Examples
@@ -98,30 +100,30 @@ glin-client logs --tail 100
 ### Complete Setup Workflow
 
 ```bash
-# 1. Install glin-client
+# 1. Install glin-provider
 cargo install --path .
 
 # 2. Run benchmark to check your hardware
-glin-client benchmark
+glin-provider benchmark
 
 # 3. Register with the network
-glin-client register \
+glin-provider register \
   --name "My RTX 3090" \
   --wallet-address "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb" \
   --backend-url "https://api.glin.ai"
 
 # 4. Start accepting tasks
-glin-client start
+glin-provider start
 
 # 5. In another terminal, check status
-glin-client status
+glin-provider status
 ```
 
 ### Custom Configuration
 
 ```bash
 # Register with custom availability and pricing
-glin-client register \
+glin-provider register \
   --name "My GPU Farm" \
   --wallet-address "0x..." \
   --min-price-per-hour 5000 \
@@ -131,17 +133,17 @@ glin-client register \
 vim ~/.glin/config.toml
 
 # Verify configuration
-glin-client status
+glin-provider status
 ```
 
 ### Running Benchmarks
 
 ```bash
 # Quick benchmark (30 seconds)
-glin-client benchmark --quick
+glin-provider benchmark --quick
 
 # Full benchmark suite (2-3 minutes)
-glin-client benchmark
+glin-provider benchmark
 
 # Benchmark output:
 # Matrix Multiply Score: 85.2
@@ -154,13 +156,13 @@ glin-client benchmark
 
 ```bash
 # Check current status
-glin-client status
+glin-provider status
 
 # View recent logs
-glin-client logs --tail 50
+glin-provider logs --tail 50
 
 # Follow logs in real-time
-glin-client logs --follow
+glin-provider logs --follow
 
 # Check configuration
 cat ~/.glin/config.toml
@@ -170,13 +172,13 @@ cat ~/.glin/config.toml
 
 ```bash
 # Use local backend for development
-glin-client register \
+glin-provider register \
   --name "Dev GPU" \
   --wallet-address "0x123..." \
   --backend-url "http://localhost:3000"
 
 # Start worker with debug logs
-RUST_LOG=debug glin-client start
+RUST_LOG=debug glin-provider start
 
 # Run tests
 cargo test
@@ -226,6 +228,8 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 ## 🔗 Links
 
 - **Website**: https://glin.ai
-- **Documentation**: https://docs.glin.ai
+- **Provider Docs**: https://docs.glin.ai/federated-learning/getting-started/train-model
+- **Network Docs**: https://docs.glin.ai/network/intro
+- **Full Documentation**: https://docs.glin.ai
 - **Discord**: https://discord.gg/glin-ai
 - **GitHub**: https://github.com/glin-ai

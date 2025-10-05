@@ -1,11 +1,13 @@
 [package]
-name = "glin-client"
+name = "glin-provider"
 version = "0.1.0"
 edition = "2021"
 authors = ["GLIN AI Team"]
-description = "Reference CLI client for GLIN federated learning marketplace"
+description = "GPU provider CLI for GLIN federated learning marketplace"
 license = "Apache-2.0"
-repository = "https://github.com/glin-ai/glin-client"
+repository = "https://github.com/glin-ai/glin-provider"
+homepage = "https://docs.glin.ai/federated-learning/getting-started/train-model"
+documentation = "https://docs.glin.ai/federated-learning/intro"
 keywords = ["federated-learning", "distributed-computing", "machine-learning", "gpu"]
 categories = ["command-line-utilities", "science"]
 
